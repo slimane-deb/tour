@@ -20,16 +20,6 @@ import java.util.Locale;
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
 
-    //    @Override
-//    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-//        configurer
-//                .defaultContentType(MediaType.TEXT_HTML)
-//                .ignoreAcceptHeader(true);
-//    }
-//    @Override
-//    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-//        registry.addResourceHandler("/acc/**").addResourceLocations("/acc/");
-//    }
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
@@ -40,32 +30,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
                 .allowCredentials(true)
                 .maxAge(3600);
     }
-//    @Override
-//    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-//        configurer.enable();
-//
-//    }
-
-//    @Bean
-//    public ViewResolver viewResolverHtml() {
-//        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-//        viewResolver.setPrefix("/accueil/");
-//        viewResolver.setSuffix("");
-//        viewResolver.setOrder(2);
-//        return viewResolver;
-//    }
-
-//    @Bean
-//    public JasperReportsViewResolver getJasperReportsViewResolver() {
-//        JasperReportsViewResolver resolver = new JasperReportsViewResolver();
-//        resolver.setPrefix("classpath:/reports/jasper/");
-//        resolver.setSuffix(".jasper");
-//        resolver.setReportDataKey("datasource");
-//        resolver.setViewNames("rpt_*");
-//        resolver.setViewClass(JasperReportsMultiFormatView.class);
-//        resolver.setOrder(0);
-//        return resolver;
-//    }
 
     /*  i18n */
     @Bean
